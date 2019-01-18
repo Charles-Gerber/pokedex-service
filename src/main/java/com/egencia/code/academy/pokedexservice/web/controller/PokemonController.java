@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
@@ -18,7 +19,10 @@ public class PokemonController {
     @ResponseBody
     @RequestMapping(value="pokemons", method = RequestMethod.GET)
     public List<Pokemon> getPokemons(){
-        return new ArrayList<>();
+        List<Pokemon> pokemons = new ArrayList<>();
+        pokemons.add(new Pokemon(1L,"Bulbasaur", Arrays.asList("poison", "grass"), 0));
+        pokemons.add(new Pokemon(2L,"Ivysaur", Arrays.asList("air"), 1));
+        return pokemons;
     }
 
 }
