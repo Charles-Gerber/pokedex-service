@@ -2,7 +2,6 @@ package com.egencia.code.academy.pokedexservice.web.controller;
 
 import com.egencia.code.academy.pokedexservice.model.Pokemon;
 import com.egencia.code.academy.pokedexservice.model.PokemonDetail;
-import com.egencia.code.academy.pokedexservice.model.PokemonsResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +25,6 @@ public class PokemonController {
         List<Pokemon> pokemons = new ArrayList<>();
         pokemons.add(new Pokemon(1L,"Bulbasaur", Arrays.asList("poison", "grass"), 0));
         pokemons.add(new Pokemon(2L,"Ivysaur", Arrays.asList("air"), 1));
-        PokemonsResponse pokemonsResponse = new PokemonsResponse();
-        pokemonsResponse.setPokemons(pokemons);
         return pokemons;
     }
 
