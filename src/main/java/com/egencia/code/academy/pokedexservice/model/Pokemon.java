@@ -6,14 +6,28 @@ public class Pokemon {
     int id;
     String name;
     List<String> types;
-    int nbLikes;
+    int likes;
 
-    public Pokemon(int id, String name, List <String> types, int nbLikes) {
+    public Pokemon(int id, String name, List <String> types, int likes) {
         this.id = id;
         this.name = name;
         this.types = types;
-        this.nbLikes = nbLikes;
+        this.likes = likes;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getTypes() {
+        return types;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
 }
